@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.login-image {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+}
+
+form input {
+    padding: 10px;
+    margin: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+}
