@@ -21,4 +21,6 @@ Route::middleware(['auth'])->group(function () {
     // Route untuk pelanggan
     Route::get('/pelanggan', [PelangganController::class, 'index'])->name('pelanggan');
 });
+
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 ?>
