@@ -29,7 +29,10 @@
             <li><a href="{{ route('laporan') }}">Laporan</a></li>
         </ul>
         <div class="logout">
-            <button class="logout-btn" onclick="logout()">Logout</button>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit">Logout</button>
+            </form>
         </div>
     </div>
 
