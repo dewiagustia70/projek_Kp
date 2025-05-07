@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PelangganController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,7 +13,12 @@ Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.form
 // Menangani proses login (POST request)
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
-// Menampilkan dashboard setelah login (GET request)
-Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+// Route yang dilindungi oleh middleware auth
+Route::middleware(['auth'])->group(function () {
+    // Menampilkan dashboard setelah login (GET request)
+    Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 
+    // Route untuk pelanggan
+    Route::get('/pelanggan', [PelangganController::class, 'index'])->name('pelanggan');
+});
 ?>
