@@ -39,7 +39,7 @@
     <!-- Main Content -->
     <div class="main-content">
         <div class="welcome">
-            <p>Selamat Datang, Admin</p>
+            <p>Selamat Datang, {{ Auth::user()->username }}</p>
         </div>
 
         <div class="dashboard">
