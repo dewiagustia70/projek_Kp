@@ -18,7 +18,7 @@ loginForm.addEventListener('submit', function(event) {
     // Verifikasi username dan password
     if (username === validUsername && password === validPassword) {
         // Jika login berhasil, arahkan ke halaman dashboard
-        window.location.href = 'dashboard.html'; // Arahkan ke halaman dashboard
+        window.location.href = '/dashboard'; // Arahkan ke halaman dashboard
     } else {
         // Jika login gagal, tampilkan alert
         alert("Username atau password salah!");
