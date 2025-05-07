@@ -1,0 +1,178 @@
+/* Mengatur margin, padding, dan box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Inter-Regular', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Font Regular */
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('Inter/static/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+/* Font Bold */
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('Inter/static/Inter_18pt-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #8e44ad;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar-header {
+    text-align: left;
+}
+
+.profile-info {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.profile-icon {
+    font-size: 2em;
+    margin-right: 12px;
+}
+
+.profile-text {
+    text-align: left;
+}
+
+.admin-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.admin-status {
+    font-size: 0.9em;
+    color: #3FEA45; /* Warna hijau untuk "Online" */
+}
+
+.sidebar-title {
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    margin-top: 40px;
+}
+
+.sidebar-menu li {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #9b59b6; /* Hover effect */
+    border-radius: 5px;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logout-btn:hover {
+    background-color: #8e44ad;
+}
+
+/* Konten Utama */
+.main-content {
+    margin-left: 250px;
+    padding: 50px;
+    width: calc(100% - 250px);
+}
+
+.welcome {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: left;
+    gap: 30px;
+}
+
+.card {
+    width: 30%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card-icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    /* Sidebar menjadi lebih kecil pada layar kecil */
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    /* Kartu menjadi vertikal dan memenuhi lebar layar */
+    .dashboard {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%; /* Membuat kartu memenuhi lebar layar */
+    }
+
+    .logout-btn {
+        width: 100%;
+    }
+}
